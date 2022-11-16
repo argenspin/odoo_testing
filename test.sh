@@ -1,4 +1,7 @@
+sudo add-apt-repository universe -y
 sudo apt update
+python3 -m venv odooenv
+source odooenv/bin/activate 
 sudo apt install python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev \
     libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev \
     liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev python3-pip gdebi -y
@@ -22,4 +25,4 @@ pip3 install setuptools wheel
 pip3 install -r requirements.txt
 sudo rm /usr/lib/python3/dist-packages/_cffi_backend.cpython-310-x86_64-linux-gnu.so
 pip3 install -r requirements.txt
-sed -i "s/ubuntu/$USER/g" odoo.conf
+#sed -i "s/ubuntu/$USER/g" odoo.conf
