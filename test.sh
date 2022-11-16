@@ -25,4 +25,4 @@ pip3 install setuptools wheel
 pip3 install -r requirements.txt
 sudo rm /usr/lib/python3/dist-packages/_cffi_backend.cpython-310-x86_64-linux-gnu.so
 pip3 install -r requirements.txt
-#sed -i "s/ubuntu/$USER/g" odoo.conf
+sed -i "s/odoo/$USER/g" odoo.conf
