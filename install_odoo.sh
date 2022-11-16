@@ -2,7 +2,7 @@ sudo add-apt-repository universe -y
 sudo apt update
 sudo apt install python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev \
     libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev \
-    liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev python3-pip gdebi -y
+    liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev python3-pip python3-venv gdebi -y
 
 sudo apt-get install nodejs npm -y
 sudo npm install -g rtlcss
@@ -19,6 +19,8 @@ sudo apt install postgresql postgresql-client -y
 sudo -u postgres createuser -s $USER
 createdb $USER
 
+#python3 -m venv odooenv
+#source odooenv/bin/activate 
 pip3 install setuptools wheel
 pip3 install -r requirements.txt
 #sudo rm /usr/lib/python3/dist-packages/_cffi_backend.cpython-310-x86_64-linux-gnu.so
